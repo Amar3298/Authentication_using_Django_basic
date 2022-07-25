@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Home</h1>
+    {% if user.is_authenticated %}
+        <h2>User {{user.username}}</h2>
+    {% else %}
+        <h2>you are not logged in</h2>
+    {% endif %}
+    <ul>
+        <li><a href="register/">Register</a></li>
+        <li><a href="accounts/login/">login</a></li>
+        <li><a href="logout/">logout</a></li>
+        <li><a href="admin/">Dashboard</a></li>
+    </ul>
+</body>
+
+</html>
